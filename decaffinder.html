@@ -72,7 +72,13 @@ function setMapOnCurrentPosition(){
     var longitude = pos.coords.longitude;
     var marker = new naver.maps.Marker({
     position: new naver.maps.LatLng(latitude, longitude),
-    map: map
+    map: map,
+    icon: {
+        url: './img/current_position_icon.png',
+        size: new naver.maps.Size(22, 35),
+        origin: new naver.maps.Point(0, 0),
+        anchor: new naver.maps.Point(11, 35)
+    }
   });
   map.setCenter(new naver.maps.LatLng(latitude, longitude));
 });
